@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Repository!
+{% endblock %}
+
+{% block body %}
+	<div class="d-flex p-2" style="width: 2rem">
+		<img src="assets/img/marvel.jpg" style="width: 8rem; height: 8rem" alt=""/>
+		<h1 class="ml-4">Repository</h1>
+	</div>
+
+	{# TEAM 1 #}
+	<h1>Team #1</h1>
+	<div class="d-flex flex-row">
+		{% for acteur in acteurs %}
+			{% if acteur.team == "1" %}
+				<div class="container col-sm col-12">
+					<div class="row">
+						<div class="col-4">
+							<img src="/assets/img/{{ acteur.picture }} " style="width: 8rem; height: 8rem" alt=""/>
+							<center>
+								<a href="marvel/{{ acteur.id }}">
+									<h5 class="text-center">{{ acteur.identity }}</h5>
+								</a>
+							</center>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	{# TEAM 2 #}
+	<h1>Team #2</h1>
+	<div class="d-flex flex-row">
+		{% for acteur in acteurs %}
+			{% if acteur.team == "2" %}
+				<div class="container">
+					<div class="row col-4">
+						<img src="/assets/img/{{ acteur.picture }} " style="width: 8rem; height: 8rem" alt=""/>
+						<a href="marvel/{{ acteur.id }}">
+							<h5 class="">{{ acteur.identity }}</h5>
+						</a>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	{# TEAM 3 #}
+	<h1>Team #3</h1>
+	<div class="d-flex flex-row">
+		{% for acteur in acteurs %}
+			{% if acteur.team == "3" %}
+				<div class="container">
+					<div class="row col-4">
+						<img src="/assets/img/{{ acteur.picture }} " style="width: 8rem; height: 8rem" alt=""/>
+						<a href="marvel/{{ acteur.id }}">
+							<h5 class="">{{ acteur.identity }}</h5>
+						</a>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endblock %}
