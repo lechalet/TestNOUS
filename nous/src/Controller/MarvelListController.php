@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MarvelListController extends AbstractController
 {
     /**
-     * @Route("/marvel", name="marvel_list")
+     * @Route("/", name="marvel_list")
      */
     public function index()
     {
@@ -21,8 +21,4 @@ class MarvelListController extends AbstractController
             'acteurs' => $acteurs
         ]);
     }
-
-    /**
-     * @Route("/marvel/acteur/{id}", name="marvel/acteurs_")
-     */
 }
